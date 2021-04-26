@@ -26,8 +26,8 @@ public class ACTIVIDAD3 {
         media.media();
         act_3 Num = new act_3 ();
         Num.Num();
-        act_3 diasemana =new act_3 ();
-        diasemana.diasemana();
+        act_3 dias =new act_3 ();
+        dias.dias();
         act_3 Modelo = new act_3();
         Modelo.Modelo();
         

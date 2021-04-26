@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package actividad_3;
-
 import java.util.Scanner;
 
 /**
@@ -17,7 +16,7 @@ public class act_3 {
     int FACTORIAL;
     int media;
     int Num;
-    int diasemana;
+    int dias;
     int Modelo;
     //SUMA DEL 0 AL 10
     
@@ -41,6 +40,7 @@ public class act_3 {
     //FACTORIAL DE UN NUMERO INTRODUCIDO POR EL USUARIO
     public static void FACTORIAL(){
         Scanner entrada = new Scanner(System.in);
+        System.out.println("introducir un numero para calcular su factorial");
          int num = entrada.nextInt();
       int FACTORIAL = 1;
          for (int i = num ; i >= 1; i--) {
@@ -55,16 +55,16 @@ public class act_3 {
         System.out.println("ingresar la cantidad de numeros que le gustaria sacar para la media: ");
         NUM = (int) sc.nextDouble();  
         
-        double numeros[]= new double[NUM];
+        double Num[]= new double[NUM];
          for(int i = 0; i < NUM ; i++)
          {
              System.out.println("ingresar numero : ") ;
-             numeros[i]= sc.nextDouble();
+             Num[i]= sc.nextDouble();
          }
              //CALCULAR LA MEDIA 
          double media;
          double suma = 0;
-         for (double i: numeros){
+         for (double i: Num){
          suma = suma+i;
              }
          media = suma / NUM;
@@ -75,31 +75,32 @@ public class act_3 {
     //CUAL ES EL MAYOR Y LA DISTANCIA NUMERICA ENTRE ELLOS
     public static void Num(){
         int n = 0;
-        int numeros;
+        int Num;
         int suma = 0;
         //SUMA
         Scanner sc = new Scanner (System.in);
         System.out.println("ingresar la cantidad de numeros deseados a sumar: ");
-        numeros =sc. nextInt();
+        Num =sc. nextInt();
         System.out.println("favor de ingresar los numeros: ");
-        for (int i = 0; i < numeros; i++){
+        for (int i = 0; i < Num; i++){
             n= sc. nextInt();
             suma = n + suma;
         }
         System.out.println("la suma de los numeros es: " + suma);
         //PROMEDIO
         double prom;
-        prom = (double)suma / (double)numeros;
+        prom = (double)suma / (double)Num;
         System.out.println("el promedio de los numeros es: " + prom);
-        // NUM. MAYOR Y MENOR
+   
+// NUM. MAYOR Y MENOR
         
         int ma = 0, me =1;
-        for(int i = 0; i < numeros; i++){
+        for(int i = 0; i < Num; i++){
             
-            if (numeros > ma){
+            if (Num > ma){
                 ma = n;
             }
-            else if (numeros < me){
+            else if (Num < me){
                 me = n;
             }
             System.out.println("el numero mayor es: " + ma);
@@ -111,35 +112,36 @@ public class act_3 {
         System.out.println("la diferencia entre el numero mayor y menor es: " + dif );
     }
     //ARREGLO QUE TENGA LOS NOMBRES DE LOS DIAS DE LA SEMANA
-    public static void diasemana(){
+    public static void dias(){
         
-        String dias[] = new String [7];
-        dias [0] = "Lunes";
-        dias [1] = "Martes";
-        dias [2] = "Miercoles";
-        dias [3] = "Jueves";
-        dias [4] = "Viernes";
-        dias [5] = "Sabado";
-        dias [6] = "Domingo";
+        String dia[] = new String [7];
+        dia [0] = "Lunes";
+        dia [1] = "Martes";
+        dia [2] = "Miercoles";
+        dia [3] = "Jueves";
+        dia [4] = "Viernes";
+        dia [5] = "Sabado";
+        dia [6] = "Domingo";
         
-        for (String dia: dias){
-            System.out.println("dia");
+        for (String dias: dia){
+            System.out.println(dias);
         }
     //MODELO DE JUEGO GATO
     }
     public static void Modelo(){
         
         String Modelo [][] = new String [3][3];
+        
         for (String vertical[]: Modelo){
             for (String horizontal: vertical){
-                System.out.println("+" + " ");
+                System.out.print("_" + " ");
             }
             System.out.println("");
             
         }
     }
 
-    
+ 
     }
         
         
